@@ -1,0 +1,49 @@
+<h3>working form options to add tags</h3>
+
+<%= form_for [@script, @tag] do |f| %>
+  <%= check_box_tag(:category_name, "TV") %>
+  <%= label_tag(:category_name, "TV") %>
+  <%= check_box_tag(:category_name, "Film") %>
+  <%= label_tag(:category_name, "Film") %>
+  <%= check_box_tag(:category_name, "Life") %>
+  <%= label_tag(:category_name, "Life") %>
+  <%= check_box_tag(:category_name, "Humor") %>
+  <%= label_tag(:category_name, "Humor") %>
+  <%= f.submit "add tag" %>
+<% end %>
+
+<br>
+
+<%= form_for [@script, @tag] do |f| %>
+  <%= text_field_tag :category_name %>
+  <%= f.submit "add tag" %>
+<% end %>
+
+<br>
+
+<%= form_for [@script, @tag] do |f| %>
+<%= f.collection_select(:category_id, Category.all, :id, :name ) %>
+<%= f.submit "add tag" %>
+<% end %>
+
+<br>
+
+<h3>form to edit quote</h3>
+
+<%= form_for @script do |f| %>
+  <%= f.label :quote %>
+  <%= f.text_field :quote %>
+  <%= f.label :character %>
+  <%= f.text_field :character %>
+  <%= f.label :show %>
+  <%= f.text_field :show %>
+  <%= f.submit %>
+<% end %>
+
+<br>
+
+<h3>form to delete quote</h3>
+
+<%= form_for @script, method: :delete do |f| %>
+  <%= f.submit "delete", class: "delete" %>
+<% end %>

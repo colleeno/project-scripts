@@ -1,1 +1,11 @@
-<h2>add new form page</h2>
+<h2>add new quote page</h2>
+
+<%= form_for @script do |f| %>
+  <%= f.label :quote %>
+  <%= f.text_field :quote %>
+  <%= f.label :character %>
+  <%= f.text_field :character %>
+  <%= f.label :show %>
+  <%= f.text_field :show %>
+  <%= f.submit "Add quote" %>
+<% end %>

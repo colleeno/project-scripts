@@ -1,7 +1,8 @@
 <h1>scripts</h1>
-
-<h2>categories</h2>
+<h2>subheading about favorite quotes</h2>
 
 <% @categories.each do |category| %>
-  <p><%= link_to "#{category.name}", category_path(category) %></p>
+  <li><%= link_to "#{category.name}", category_path(category) %></li>
 <% end %>
+
+<li><%= link_to "All", scripts_path %></li>
