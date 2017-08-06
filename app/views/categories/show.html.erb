@@ -1,0 +1,15 @@
+<h2>Posts by Tag: <%= @category.name %></h2>
+
+<% @scripts.each do |script| %>
+  <article>
+    <h3><%= script.quote %></h3>
+    <p><%= script.character %></p>
+    <p><%= script.show %></p>
+    <% if script.tags.length > 0 %>
+      <p>tags</p>
+      <% script.tags.each do |tag| %>
+        <p><%= tag.category.name %></p>
+      <% end %>
+    <% end %>
+  </article>
+<% end %>
