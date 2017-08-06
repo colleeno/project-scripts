@@ -2,6 +2,6 @@
 
 <h2>categories</h2>
 
-<%= @categories.each do |category| %>
+<% @categories.each do |category| %>
   <p><%= link_to "#{category.name}", category_path(category) %></p>
 <% end %>
