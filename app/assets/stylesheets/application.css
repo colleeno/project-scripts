@@ -14,10 +14,61 @@
  *= require_self
  */
 
+
 h1, h2 {
   font-family: 'PT Mono', monospace;
 }
 
+h1 {
+  font-size: 4em;
+}
+
 li {
-  display: inline;
+  display: inline-block;
+  font-family: monospace;
+  font-size: 20px;
+  text-transform: lowercase;
+  padding: 5px;
+  margin: 0 3px;
+  box-shadow: 0 6px 10px rgba(0,0,0,0.3);
+}
+
+li a {
+  text-decoration: none;
+  color: black;
+}
+
+li:hover {
+  box-shadow: 0 8px 12px rgba(0,0,0,0.5);
+}
+
+.home-content {
+  margin: 20% auto;
+  text-align: center;
+}
+
+.home-typewriter {
+  display: flex;
+  justify-content: center;
+}
+
+.typewriter h1 {overflow: hidden; /* Ensures the content is not revealed until the animation */
+  border-right: .10em solid grey; /* The typwriter cursor */
+  white-space: nowrap; /* Keeps the content on a single line */
+  margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+  letter-spacing: .15em; /* Adjust as needed */
+  animation:
+    typing 2s steps(20, end),
+    blink-caret 1s step-end infinite;
+  }
+
+  @keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}
+
+/* The typewriter cursor effect */
+@keyframes blink-caret {
+  from, to { border-color: transparent }
+  50% { border-color: grey; }
 }

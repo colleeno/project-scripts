@@ -7,7 +7,6 @@ class TagsController < ApplicationController
   def create
     @script = Script.find(params[:script_id])
     @category = Category.find_by(name: params[:category_name])
-
     existing_tag = Tag.find_by(script: @script, category: @category)
     unless existing_tag
       @script.tags.create(category: @category)
