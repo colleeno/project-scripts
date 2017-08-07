@@ -1,39 +1,43 @@
 class ScriptsController < ApplicationController
 
   def index
+    @category = Script.find(params[:category_id])
     @scripts = Script.all
   end
 
-  def show
-    @script = Script.find(params[:id])
-    @tag = Tag.new
-  end
-
   def new
-    @script = Script.new
-    @tag = Tag.new
+    @category = Category.find(params[:category_id])
+    @script = @category.scripts.new
   end
 
   def create
-    @script = Script.create!(script_params)
-    redirect_to script_path(@script)
+    @category = Category.find(params[:category_id])
+    @script = @category.scripts.create!(script_params)
+    redirect_to category_path(@category)
+  end
+
+  def show
+    @category = Category.find(params[:category_id])
+    @script = Script.find(params[:id])
   end
 
   def edit
+    @category = Category.find(params[:category_id])
     @script = Script.find(params[:id])
-    @tag = Tag.new
   end
 
   def update
+    @category = Category.find(params[:category_id])
     @script = Script.find(params[:id])
     @script.update(script_params)
-    redirect_to script_path(@script)
+    redirect_to category_script_path(@category, @script)
   end
 
   def destroy
+    @category = Category.find(params[:category_id])
     @script = Script.find(params[:id])
     @script.destroy
-    redirect_to scripts_path
+    redirect_to category_path(@category)
   end
 
   private

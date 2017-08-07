@@ -2,12 +2,4 @@
 <p><%= @script.character %></p>
 <p><%= @script.show %></p>
 
-<% if @script.tags.length > 0 %>
-  <p>tags</p>
-  <% @script.tags.each do |tag| %>
-    <%= tag.category.name %>
-    <% end %>
-<% end %>
-+ <%= link_to "add tag", edit_script_path(@script) %>
-<br>
-<%= link_to "edit or remove quote", edit_script_path(@script)%>
+<%= link_to "edit or remove quote", edit_category_script_path(@category, @script)%>

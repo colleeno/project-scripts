@@ -1,10 +1,10 @@
 
   <h2><%= @category.name %> quotes</h2>
-    <%= link_to "add new quote", new_script_path %>
+    <%= link_to "add new quote", new_category_script_path(@category) %>
 
 <div class="transitions-enabled masonry grid">
-    <% @scripts.each do |script| %>
-      <div class= "grid-item"><p><%= link_to "#{script.quote}", script_path(script) %></p></div>
+    <% @category.scripts.each do |script| %>
+      <div class= "grid-item"><p><%= link_to "#{script.quote}", category_script_path(@category, script) %></p></div>
     <% end %>
 
 </div>
