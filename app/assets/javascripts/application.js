@@ -19,3 +19,12 @@
 //= require turbolinks
 //= require categories
 //= require_tree .
+
+$( function() {
+
+    var $pins = $('#pins').masonry({
+        itemSelector: '.box',
+        columnWidth: 200
+    });
+
+    });
