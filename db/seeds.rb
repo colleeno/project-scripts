@@ -20,6 +20,11 @@ yada = Script.create(quote: "Yada Yada Yada", character: "Elaine Benes", show: "
 bankruptcy = Script.create(quote: "I declare bankruptcy!", character: "Michael Scott", show: "The Office")
 she_said = Script.create(quote: "That's what she said", character: "Michael Scott", show: "The Office")
 chocolates = Script.create(quote: "Life is like a box of chocolates. You never know what you're gonna get.", character: "Forrest Gump", show: "Forrest Gump")
+rhett = Script.create(quote: "Frankly, my dear, I don't give a damn.", character: "Rhett Butler", show: "Gone With The Wind")
+hannibal = Script.create(quote: "A census taker once tried to test me. I ate his liver with some fava beans and a nice Chianti..", character: "Hannibal Lector", show: "Silence of the Lambs")
+hello = Script.create(quote: "You had me at 'hello'. You had me at 'hello'.", character: "Dorothy Boyd", show: "Jerry Maguire")
+boat = Script.create(quote: "We're gonna need a bigger boat.", character: "Martin Brody", show: "Jaws")
+watermelon = Script.create(quote: "I carried a watermelon.", character: "Francis 'Baby' Houseman", show: "Dirty Dancing")
 
 tv.tags.create(script: yada)
 tv.tags.create(script: bankruptcy)
@@ -27,6 +32,11 @@ tv.tags.create(script: she_said)
 
 film.tags.create(script: dorothy)
 film.tags.create(script: chocolates)
+film.tags.create(script: rhett)
+film.tags.create(script: hannibal)
+film.tags.create(script: hello)
+film.tags.create(script: boat)
+film.tags.create(script: watermelon)
 
 life.tags.create(script: dorothy)
 life.tags.create(script: chocolates)

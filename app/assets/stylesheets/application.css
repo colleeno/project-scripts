@@ -10,10 +10,35 @@
  * files in this directory. Styles in this file should be added after the last require_* statement.
  * It is generally better to create a new file per style scope.
  *
+ *= require 'masonry/centered'
+ *= require 'masonry/infinitescroll'
+ *= require 'masonry/transitions'
  *= require_tree .
  *= require_self
  */
 
+body {
+  text-transform: lowercase;
+}
+
+.category-quotes {
+  display: flex;
+  flex-wrap: wrap;
+   align-items: baseline;
+}
+
+.quote {
+  align-self: flex-start;
+  text-align: left;
+  background-color: #ececec;
+  padding: 20px;
+  margin: 5px;
+}
+
+p {
+  font-family: monospace;
+  font-size: 24px;
+}
 
 h1, h2 {
   font-family: 'PT Mono', monospace;
@@ -30,7 +55,7 @@ li {
   text-transform: lowercase;
   padding: 5px;
   margin: 0 3px;
-  box-shadow: 0 6px 10px rgba(0,0,0,0.3);
+  box-shadow: 0 4px 8px rgba(0,0,0,0.3);
 }
 
 li a {
@@ -39,7 +64,7 @@ li a {
 }
 
 li:hover {
-  box-shadow: 0 8px 12px rgba(0,0,0,0.5);
+  box-shadow: 0 6px 10px rgba(0,0,0,0.4);
 }
 
 .home-content {
