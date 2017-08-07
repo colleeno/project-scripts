@@ -1,4 +1,12 @@
-$('#pins').masonry({
-  itemSelector: '.box',
+$(function() {
+
+
+$('.grid').masonry({
+  itemSelector: '.grid-item',
   columnWidth: 200
 });
+
+});
+
+
+console.log('loaded')

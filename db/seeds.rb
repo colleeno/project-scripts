@@ -25,6 +25,10 @@ hannibal = Script.create(quote: "A census taker once tried to test me. I ate his
 hello = Script.create(quote: "You had me at 'hello'. You had me at 'hello'.", character: "Dorothy Boyd", show: "Jerry Maguire")
 boat = Script.create(quote: "We're gonna need a bigger boat.", character: "Martin Brody", show: "Jaws")
 watermelon = Script.create(quote: "I carried a watermelon.", character: "Francis 'Baby' Houseman", show: "Dirty Dancing")
+filma = Script.create(quote: "Here is another quote to list on my page", character: "Some character", show: "Some Movie")
+filmb = Script.create(quote: "Here is another quote to list on my page", character: "Some character", show: "Some Movie")
+filmc = Script.create(quote: "Here is another quote to list on my page", character: "Some character", show: "Some Movie")
+
 
 tv.tags.create(script: yada)
 tv.tags.create(script: bankruptcy)
@@ -37,6 +41,9 @@ film.tags.create(script: hannibal)
 film.tags.create(script: hello)
 film.tags.create(script: boat)
 film.tags.create(script: watermelon)
+film.tags.create(script: filma)
+film.tags.create(script: filmb)
+film.tags.create(script: filmc)
 
 life.tags.create(script: dorothy)
 life.tags.create(script: chocolates)

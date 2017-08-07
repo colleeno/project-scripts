@@ -11,20 +11,9 @@
 // about supported directives.
 //
 //= require jquery
-//= require jquery.turbolinks
 //= require jquery_ujs
 //= require rails-ujs
 //= require masonry.pkgd
 //= require masonry/jquery.masonry
-//= require turbolinks
 //= require categories
 //= require_tree .
-
-$( function() {
-
-    var $pins = $('#pins').masonry({
-        itemSelector: '.box',
-        columnWidth: 200
-    });
-
-    });

@@ -1,11 +1,11 @@
 <!-- <div class="category-view"> -->
   <h2><%= @category.name %> quotes</h2>
     <%= link_to "add new quote", new_script_path %>
-<div id="pins" data-masonry='{ "columnWidth": 200, "itemSelector": ".box" }' class="transitions-enabled masonry">
-  <div class= "box">
+
+<div class="transitions-enabled masonry grid">
     <% @scripts.each do |script| %>
-        <p><%= link_to "#{script.quote}", script_path(script) %></p>
+      <div class= "grid-item"><p><%= link_to "#{script.quote}", script_path(script) %></p></div>
     <% end %>
-  </div>
+
 </div>
 <!-- </div> -->
