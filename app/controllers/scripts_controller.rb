@@ -12,8 +12,13 @@ class ScriptsController < ApplicationController
 
   def create
     @category = Category.find(params[:category_id])
-    @script = @category.scripts.create!(script_params)
-    redirect_to category_path(@category)
+    @script = @category.scripts.new(script_params)
+    if @script.save
+      flash[:notice] = "Quote added"
+      redirect_to category_path(@category)
+    else
+      render :new
+    end
   end
 
   def show
@@ -30,6 +35,7 @@ class ScriptsController < ApplicationController
     @category = Category.find(params[:category_id])
     @script = Script.find(params[:id])
     @script.update(script_params)
+    flash[:notice] = "Quote updated"
     redirect_to category_script_path(@category, @script)
   end
 
@@ -37,6 +43,7 @@ class ScriptsController < ApplicationController
     @category = Category.find(params[:category_id])
     @script = Script.find(params[:id])
     @script.destroy
+    flash[:alert] = "Quote deleted"
     redirect_to category_path(@category)
   end
 

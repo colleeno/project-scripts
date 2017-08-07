@@ -24,6 +24,15 @@ body {
   text-transform: lowercase;
 }
 
+.user-info {
+  text-align: center;
+}
+
+.flash {
+  padding: 1em;
+  background: #eee;
+}
+
 .grid {
   margin-left: 20px;
 }
@@ -76,7 +85,7 @@ li:hover {
 }
 
 .home-content {
-  margin: 20% auto;
+  margin: 18% auto;
   text-align: center;
 }
 

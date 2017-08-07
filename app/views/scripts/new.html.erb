@@ -9,3 +9,7 @@
   <%= f.text_field :show %>
   <%= f.submit "Add quote" %>
 <% end %>
+
+<% @script.errors.full_messages.each do |message| %>
+  <p><%= message %></p>
+<% end %>
