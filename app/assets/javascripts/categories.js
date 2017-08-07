@@ -4,8 +4,15 @@ $(function() {
 $('.grid').masonry({
   itemSelector: '.grid-item',
   columnWidth: 200,
-  isFitWidth: true
+  isFitWidth: true,
+  gutter: 10
 });
+
+
+$("button").click(function(){
+        $("p").toggle();
+    });
+
 
 });
 

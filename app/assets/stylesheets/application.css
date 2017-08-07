@@ -33,6 +33,7 @@ body {
   background: #eee;
 }
 
+
 .grid {
   margin: 0 auto;
 }
@@ -44,12 +45,12 @@ body {
 
 .grid-item {
   width: 200px;
-  box-shadow: 0 2px 1px rgba(0,0,0,0.3);
-  margin-bottom: 2px;
+  box-shadow: 1px 3px 6px rgba(0,0,0,0.3);
+  margin-bottom: 10px;
 }
 
 .grid-item p {
-  padding: 5px 10px;
+  padding: 5px 15px;
 }
 
 .grid-item:hover {
@@ -63,10 +64,44 @@ p {
 
 h1, h2 {
   font-family: 'PT Mono', monospace;
+  text-align: center;
 }
 
 h1 {
   font-size: 4em;
+}
+
+.hidden{
+       display:none;
+    }
+
+button {
+  display: block;
+  margin: 0 auto 20px;
+  padding: 10px;
+  cursor: pointer;
+  background-color: white;
+  border: none;
+  box-shadow: 1px 3px 6px rgba(0,0,0,0.3);
+  font-family: monospace;
+  font-size: 16px;
+}
+
+.center {
+  margin: 0 auto;
+  text-align: center;
+}
+
+.form-link {
+  display: block;
+  text-align: center;
+  font-family: monospace;
+  padding-bottom: 20px;
+  color: black;
+}
+
+.form-link a {
+  color: black;
 }
 
 li {
