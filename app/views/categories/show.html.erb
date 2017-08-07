@@ -1,11 +1,11 @@
 <!-- <div class="category-view"> -->
   <h2><%= @category.name %> quotes</h2>
     <%= link_to "add new quote", new_script_path %>
-<div id="pins">
+<div id="pins" class="transitions-enabled infinite-scroll masonry">
   <div class= "box">
     <% @scripts.each do |script| %>
-        <div class="quote"><p><%= link_to "#{script.quote}", script_path(script) %></p></div>
+        <p><%= link_to "#{script.quote}", script_path(script) %></p>
     <% end %>
   </div>
-</div>   
+</div>
 <!-- </div> -->

@@ -21,23 +21,19 @@ body {
   text-transform: lowercase;
 }
 
-.category-quotes {
-  display: flex;
-  flex-wrap: wrap;
-   align-items: baseline;
-}
+.centered { margin: 0 auto; }
 
-.quote {
-  align-self: flex-start;
-  text-align: left;
-  background-color: #ececec;
-  padding: 20px;
-  margin: 5px;
+.box {
+  width: 200px;
+}
+.box a {
+  color: black;
+  text-decoration: none;
 }
 
 p {
   font-family: monospace;
-  font-size: 24px;
+  font-size: 20px;
 }
 
 h1, h2 {

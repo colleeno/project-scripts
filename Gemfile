@@ -32,6 +32,7 @@ gem 'jbuilder', '~> 2.5'
 gem 'jquery-rails'
 gem 'jquery-turbolinks'
 gem 'masonry-rails', '~> 0.2.4'
+gem 'jquery-masonry-rails'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
