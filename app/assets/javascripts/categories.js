@@ -10,7 +10,7 @@ $('.grid').masonry({
 
 
 $("button").click(function(){
-        $("p").toggle();
+        $("p").slideToggle();
     });
 
 

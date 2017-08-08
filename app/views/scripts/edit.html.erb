@@ -1,4 +1,4 @@
-<h3>form to edit quote</h3>
+<h3>edit quote</h3>
 
 <%= form_for [@category, @script] do |f| %>
   <%= f.label :quote %>
@@ -7,13 +7,11 @@
   <%= f.text_field :character %>
   <%= f.label :show %>
   <%= f.text_field :show %>
-  <%= f.submit %>
+  <%= f.submit "update"%>
 <% end %>
 
 <br>
 
-<h3>form to delete quote</h3>
-
-<%= form_for [@category, @script], method: :delete do |f| %>
+<%= form_for [@category, @script], class: "form-delete", method: :delete do |f| %>
   <%= f.submit "delete", class: "delete" %>
 <% end %>

@@ -22,6 +22,8 @@
 
 body {
   text-transform: lowercase;
+  margin: 0 auto;
+  font-family: monospace;
 }
 
 .user-info {
@@ -29,10 +31,11 @@ body {
 }
 
 .flash {
-  padding: 1em;
+  padding: 5px 20px;
+  font-size: 16px;
   background: #eee;
+  margin-top: 0;
 }
-
 
 .grid {
   margin: 0 auto;
@@ -51,6 +54,7 @@ body {
 
 .grid-item p {
   padding: 5px 15px;
+  text-align: left;
 }
 
 .grid-item:hover {
@@ -58,11 +62,11 @@ body {
 }
 
 p {
-  font-family: monospace;
   font-size: 20px;
+  text-align: center;
 }
 
-h1, h2 {
+h1, h2, h3 {
   font-family: 'PT Mono', monospace;
   text-align: center;
 }
@@ -77,7 +81,7 @@ h1 {
 
 button {
   display: block;
-  margin: 0 auto 20px;
+  margin: 30px auto;
   padding: 10px;
   cursor: pointer;
   background-color: white;
@@ -85,6 +89,22 @@ button {
   box-shadow: 1px 3px 6px rgba(0,0,0,0.3);
   font-family: monospace;
   font-size: 16px;
+  outline: none;
+}
+
+button:active {
+  transform: translateY(2px);
+  box-shadow: 1px 5px 8px rgba(0,0,0,0.5);
+}
+
+.quote-show {
+  margin: 10% auto;
+  width: 80%;
+}
+
+.quotemark {
+  color: #b3b3b3;
+  font-size: 30px;
 }
 
 .center {
@@ -95,7 +115,6 @@ button {
 .form-link {
   display: block;
   text-align: center;
-  font-family: monospace;
   padding-bottom: 20px;
   color: black;
 }
@@ -104,12 +123,50 @@ button {
   color: black;
 }
 
+form {
+  margin: 0 auto;
+  width: 80%;
+  padding: 30px;
+  text-align: center;
+}
+
+form label, form input {
+  display: block;
+  margin: 10px auto;
+  font-size: 16px;
+}
+
+input[type=text] {
+  padding: 5px;
+  width: 300px;
+  font-size: 14px;
+  font-family: monospace;
+  outline: none;
+}
+
+input[type=submit] {
+  cursor: pointer;
+  background-color: white;
+  border: none;
+  box-shadow: 1px 3px 6px rgba(0,0,0,0.3);
+  font-family: monospace;
+  font-size: 16px;
+  outline: none;
+  width: 300px;
+  padding: 5px;
+  margin-top: 20px;
+  cursor: pointer;
+}
+
+input[value=delete] {
+  margin-top: -50px;
+}
+
 li {
   display: inline-block;
-  font-family: monospace;
   font-size: 20px;
   text-transform: lowercase;
-  padding: 5px;
+  padding: 5px 10px;
   margin: 0 3px;
   box-shadow: 0 4px 8px rgba(0,0,0,0.3);
 }
@@ -152,4 +209,15 @@ li:hover {
 @keyframes blink-caret {
   from, to { border-color: transparent }
   50% { border-color: grey; }
+}
+
+/********** MOBILE STYLES **********/
+
+@media screen and (max-width: 600px){
+  form {
+    width: 90%;
+  }
+  input[type=text], input[type=submit] {
+    width: 250px;
+  }
 }

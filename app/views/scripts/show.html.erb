@@ -1,6 +1,8 @@
 <%= link_to "edit or remove quote", edit_category_script_path(@category, @script), :class => "form-link"%>
 
-<h2><%= @script.quote %></h2>
-<button type="button" name="button">who said it?</button>
-<p class="hidden center"><%= @script.character %>,</p>
-<p class="hidden center"><%= @script.show %></p>
+<div class="quote-show">
+  <h2><span class="quotemark">&ldquo;</span><%= @script.quote %><span class="quotemark">&rdquo;</h2>
+  <button type="button" name="button">who said it?</button>
+  <p class="hidden center">- <%= @script.character %>,</p>
+  <p class="hidden center"><%= @script.show %></p>
+</div>
