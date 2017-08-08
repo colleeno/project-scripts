@@ -3,4 +3,5 @@ class Script < ApplicationRecord
   validates :quote, presence: true
   validates :character, presence: true
   validates :show, presence: true
+  belongs_to :user
 end
