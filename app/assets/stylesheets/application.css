@@ -26,11 +26,6 @@ body {
   font-family: monospace;
 }
 
-a {
-  color: black;
-  text-align: center;
-}
-
 .center {
   text-align: center;
   display: block;
@@ -41,6 +36,18 @@ a {
 .user-info {
   text-align: right;
   padding: 10px 20px;
+  font-size: 16px;
+}
+
+.user-info a {
+  color: black;
+  text-decoration: none;
+  border-right: 1px solid grey;
+  padding-right: 10px;
+}
+
+.user-info a:last-child {
+  border: none;
 }
 
 .flash {
@@ -89,8 +96,8 @@ h1 {
 }
 
 .hidden{
-       display:none;
-    }
+  display:none;
+}
 
 button {
   display: block;
@@ -128,12 +135,10 @@ button:active {
 .form-link {
   display: block;
   text-align: center;
-  padding-bottom: 20px;
-  color: black;
-}
-
-.form-link a {
-  color: black;
+  padding-bottom: 30px;
+  color: #666666;
+  margin-top: -15px;
+  font-size: 14px;
 }
 
 form {
@@ -181,6 +186,22 @@ input[type=submit] {
 input[value=delete] {
   margin-top: -50px;
 }
+
+a.star, a.no-star {
+  display: block;
+  text-decoration: none;
+  text-align: center;
+  font-size: 20px;
+}
+
+a.star {
+  color: black;
+}
+
+a.no-star {
+  color: grey;
+}
+
 
 .home-categories li {
   display: inline-block;

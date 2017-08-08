@@ -1,7 +1,14 @@
+<% if @script.user == current_user %>
 <%= link_to "edit or remove quote", edit_category_script_path(@category, @script), :class => "form-link"%>
+<% end %>
 
 <div class="quote-show">
   <h2><span class="quotemark">&ldquo;</span><%= @script.quote %><span class="quotemark">&rdquo;</h2>
+    <% if @script.users.include? current_user %>
+      <%= link_to "&starf;".html_safe, remove_star_category_script_path(@category, @script), method: :delete, class: "star" %>
+    <% else %>
+      <%= link_to "&star;".html_safe, add_star_category_script_path(@category, @script), method: :post, class: "no-star" %>
+    <% end %>
   <button type="button" name="button">who said it?</button>
   <p class="hidden center">- <%= @script.character %>,</p>
   <p class="hidden center"><%= @script.show %></p>

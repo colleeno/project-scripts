@@ -1,4 +1,5 @@
 class ScriptsController < ApplicationController
+before_action :authenticate_user!, only: [:new]
 
   def index
     @category = Script.find(params[:category_id])
@@ -53,6 +54,18 @@ class ScriptsController < ApplicationController
         flash[:alert] = "Only the creator of the quote can delete"
       end
     redirect_to category_path(@category)
+  end
+
+  def add_star
+    @script = Script.find(params[:id])
+    @script.stars.create(user: current_user)
+    redirect_back(fallback_location: root_path)
+  end
+
+  def remove_star
+    @script = Script.find(params[:id])
+    @script.stars.find_by(user: current_user).destroy
+    redirect_back(fallback_location: root_path)
   end
 
   private

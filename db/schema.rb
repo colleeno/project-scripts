@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170808140234) do
+ActiveRecord::Schema.define(version: 20170808213318) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -29,6 +29,13 @@ ActiveRecord::Schema.define(version: 20170808140234) do
     t.bigint "user_id"
     t.index ["category_id"], name: "index_scripts_on_category_id"
     t.index ["user_id"], name: "index_scripts_on_user_id"
+  end
+
+  create_table "stars", force: :cascade do |t|
+    t.bigint "user_id"
+    t.bigint "script_id"
+    t.index ["script_id"], name: "index_stars_on_script_id"
+    t.index ["user_id"], name: "index_stars_on_user_id"
   end
 
   create_table "users", force: :cascade do |t|
@@ -50,4 +57,6 @@ ActiveRecord::Schema.define(version: 20170808140234) do
 
   add_foreign_key "scripts", "categories"
   add_foreign_key "scripts", "users"
+  add_foreign_key "stars", "scripts"
+  add_foreign_key "stars", "users"
 end
