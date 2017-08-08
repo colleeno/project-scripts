@@ -6,7 +6,7 @@ class CategoriesController < ApplicationController
 
   def show
       @categories = Category.all
-      @category = Category.find(params[:id])
+      @category = Category.find_by_name(params[:id])
       @scripts = @category.scripts
   end
 

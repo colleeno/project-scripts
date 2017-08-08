@@ -7,12 +7,12 @@ before_action :authenticate_user!, only: [:new]
   end
 
   def new
-    @category = Category.find(params[:category_id])
+    @category = Category.find_by_name(params[:category_id])
     @script = @category.scripts.new
   end
 
   def create
-    @category = Category.find(params[:category_id])
+    @category = Category.find_by_name(params[:category_id])
     @script = @category.scripts.new(script_params.merge(user: current_user))
     if @script.save
       flash[:notice] = "Quote added"
@@ -23,17 +23,17 @@ before_action :authenticate_user!, only: [:new]
   end
 
   def show
-    @category = Category.find(params[:category_id])
+    @category = Category.find_by_name(params[:category_id])
     @script = Script.find(params[:id])
   end
 
   def edit
-    @category = Category.find(params[:category_id])
+    @category = Category.find_by_name(params[:category_id])
     @script = Script.find(params[:id])
   end
 
   def update
-    @category = Category.find(params[:category_id])
+    @category = Category.find_by_name(params[:category_id])
     @script = Script.find(params[:id])
     if @script.user == current_user
       @script.update(script_params)
@@ -45,7 +45,7 @@ before_action :authenticate_user!, only: [:new]
   end
 
   def destroy
-    @category = Category.find(params[:category_id])
+    @category = Category.find_by_name(params[:category_id])
     @script = Script.find(params[:id])
       if @script.user == current_user
         @script.destroy
