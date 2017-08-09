@@ -2,7 +2,7 @@ class StarsController < ApplicationController
 before_action :authenticate_user!
 
   def index
-    @stars = Star.all
+    @stars = current_user.stars
   end
 
 end

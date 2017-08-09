@@ -4,6 +4,6 @@ class Script < ApplicationRecord
   validates :character, presence: true
   validates :show, presence: true
   belongs_to :user
-  has_many :stars
+  has_many :stars, dependent: :destroy
   has_many :users, through: :stars
 end

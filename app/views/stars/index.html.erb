@@ -1,7 +1,15 @@
-<h2>stars</h2>
+<h2>starred</h2>
 
-<% @stars.each do |star| %>
-<% if star.user == current_user %>
-  <%= "#{star.script_id}" %>
-  <% end %>
+<div class="transitions-enabled masonry grid">
+    <% @stars.each do |star| %>
+        <%= link_to category_script_path(star.script.category, star.script) do %>
+        <div class= "grid-item">
+          <p><%= star.script.quote %></p>
+        </div>
+        <% end %>
+    <% end %>
+</div>
+
+<% if @stars == [] %>
+ <p>you haven't starred any quotes</p>
 <% end %>

@@ -1,5 +1,5 @@
 class ScriptsController < ApplicationController
-before_action :authenticate_user!, only: [:new]
+before_action :authenticate_user!, only: [:new, :add_star, :remove_star]
 
   def index
     @category = Script.find(params[:category_id])

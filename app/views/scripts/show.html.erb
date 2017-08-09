@@ -9,6 +9,7 @@
     <% else %>
       <%= link_to "&star;".html_safe, add_star_category_script_path(@category, @script), method: :post, class: "no-star" %>
     <% end %>
+    <%= @script.stars.count %>
   <button type="button" name="button">who said it?</button>
   <p class="hidden center">- <%= @script.character %>,</p>
   <p class="hidden center"><%= @script.show %></p>
