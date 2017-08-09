@@ -1,3 +1,5 @@
+<main class="category">
+
 <h2>quotes you starred</h2>
 
 <div class="transitions-enabled masonry grid">
@@ -14,13 +16,4 @@
  <p>you haven't starred any quotes</p>
 <% end %>
 
-<h2>quotes you posted</h2>
-  <% @scripts.each do |script| %>
-  <% if script.user == current_user %>
-  <%= script.quote %>
-  <% end %>
-<% end %>
-
-<% if @scripts == [] %>
- <p>you haven't posted any quotes</p>
-<% end %>
+</main>
