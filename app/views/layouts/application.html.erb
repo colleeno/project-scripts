@@ -13,14 +13,12 @@
   <body>
     <header>
       <nav>
-        <% flash.each do |type, message| %>
-        <p class="flash <%= type %>"><%= message %></p>
-        <% end %>
         <div class="user-info">
           <div class="nav-left">
           <%= link_to "home", root_path %>
           <a href = "/categories/tv">tv</a>
           <a href = "/categories/film">film</a>
+          <a href = "/stars">stars</a>
           </div>
           <div class="nav-right">
           <% if current_user %>
@@ -31,6 +29,9 @@
           <% end %>
           </div>
         </div>
+        <% flash.each do |type, message| %>
+        <p class="flash <%= type %>"><%= message %></p>
+        <% end %>
       </nav>
     </header>
         <%= yield %>

@@ -1,0 +1,15 @@
+<h2>quotes you posted</h2>
+
+<div class="transitions-enabled masonry grid">
+    <% @scripts.each do |script| %>
+        <%= link_to category_script_path(script.category, script) do %>
+        <div class= "grid-item">
+          <p><%= script.quote %></p>
+        </div>
+        <% end %>
+    <% end %>
+</div>
+
+<% if @scripts == [] %>
+ <p>you haven't posted any quotes</p>
+<% end %>

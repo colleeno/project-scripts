@@ -1,8 +1,8 @@
-class StarsController < ApplicationController
+class UsersController < ApplicationController
 before_action :authenticate_user!
 
   def index
-    @stars = current_user.stars
+    @users = User.all
     @scripts = current_user.scripts
   end
 

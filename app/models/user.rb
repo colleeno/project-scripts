@@ -5,5 +5,5 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :trackable, :validatable
   has_many :scripts, dependent: :destroy
   has_many :stars
-  has_many :scripts, through: :stars
+  # has_many :scripts, through: :stars
 end
