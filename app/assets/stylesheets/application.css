@@ -75,8 +75,12 @@ a {
   margin-top: 0;
 }
 
-.category {
+.category, .profile-views {
   margin-top: 3em;
+}
+
+.profile-views h2 {
+  margin-bottom: 2.3em;
 }
 
 .grid {
@@ -261,10 +265,11 @@ a.no-star {
   justify-content: center;
 }
 
-.typewriter h1 {overflow: hidden; /* Ensures the content is not revealed until the animation */
-  border-right: .10em solid grey; /* The typwriter cursor */
-  white-space: nowrap; /* Keeps the content on a single line */
-  margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+.typewriter h1 {
+  overflow: hidden; /* hide content */
+  border-right: .10em solid grey; /* typwriter cursor */
+  white-space: nowrap; /* keep to one line */
+  margin: 0 auto;
   letter-spacing: .15em;
   animation:
     typing 2s steps(20, end),

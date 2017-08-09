@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170808213318) do
+ActiveRecord::Schema.define(version: 20170809200858) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -34,6 +34,8 @@ ActiveRecord::Schema.define(version: 20170808213318) do
   create_table "stars", force: :cascade do |t|
     t.bigint "user_id"
     t.bigint "script_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
     t.index ["script_id"], name: "index_stars_on_script_id"
     t.index ["user_id"], name: "index_stars_on_user_id"
   end

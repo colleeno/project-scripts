@@ -3,7 +3,7 @@
     <%= link_to "+ new quote", new_category_script_path(@category), :class => "form-link"%>
 
 <div class="transitions-enabled masonry grid">
-    <% @category.scripts.each do |script| %>
+    <% @category.scripts.order("created_at DESC").each do |script| %>
         <%= link_to category_script_path(@category, script) do %>
         <div class= "grid-item">
           <p><%= script.quote %></p>
