@@ -38,12 +38,14 @@ a {
 
 .nav-left {
   float: left;
-  padding: 10px 20px 10px 20px;
 }
 
 .nav-right {
   float: right;
-  padding: 10px 20px 10px 20px;
+}
+
+.nav-left, .nav-right {
+  padding: 10px 20px;
 }
 
 .user-info {
@@ -289,4 +291,37 @@ a.no-star {
   input[type=text], input[type=submit] {
     width: 250px;
   }
+
+  .user-info {
+    font-size: 14px;
+  }
+
+  .user-info a {
+    padding-right: 6px;
+  }
+
+  .nav-left, .nav-right {
+    padding: 10px 3px;
+  }
+
+  input[type=submit], input[type=label] {
+    font-size: 14px;
+  }
+
+  h1 {
+    font-size: 3em;
+  }
+
+  h2 {
+    font-size: 20px;
+  }
+
+  p {
+    font-size: 18px;
+  }
+
+  .category {
+    margin-top: 2em;
+  }
+
 }
