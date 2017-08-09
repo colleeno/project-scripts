@@ -32,10 +32,21 @@ body {
   margin: 0 auto;
 }
 
+.nav-left {
+  float: left;
+  padding: 10px 20px 10px 0;
+}
+
+.nav-right {
+  float: right;
+  padding: 10px 0px 10px 20px;
+}
 
 .user-info {
-  text-align: right;
-  padding: 10px 20px;
+  border-bottom: 1px dashed #ececec;
+  margin: 0 20px;
+  clear: both;
+  overflow: auto;
   font-size: 16px;
 }
 
@@ -55,6 +66,10 @@ body {
   font-size: 16px;
   background: #eee;
   margin-top: 0;
+}
+
+.category {
+  margin-top: 3em;
 }
 
 .grid {
@@ -135,10 +150,13 @@ button:active {
 .form-link {
   display: block;
   text-align: center;
-  padding-bottom: 30px;
   color: #666666;
-  margin-top: -15px;
+  margin-top: 3em;
   font-size: 14px;
+}
+
+.category .form-link {
+  margin: -10px 0 30px 0;
 }
 
 form {
@@ -195,7 +213,7 @@ a.star, a.no-star {
 }
 
 a.star {
-  color: black;
+  color: grey;
 }
 
 a.no-star {
@@ -203,21 +221,18 @@ a.no-star {
 }
 
 
-.home-categories li {
+.home-categories a {
   display: inline-block;
   font-size: 20px;
   text-transform: lowercase;
   padding: 5px 10px;
   margin: 0 3px;
   box-shadow: 0 4px 8px rgba(0,0,0,0.3);
-}
-
-li a {
   text-decoration: none;
   color: black;
 }
 
-.home-categories li:hover {
+.home-categories a:hover {
   box-shadow: 0 6px 10px rgba(0,0,0,0.4);
 }
 

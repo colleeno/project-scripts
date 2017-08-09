@@ -10,5 +10,5 @@ Rails.application.routes.draw do
       end
     end
   end
-
+  resources :stars, only: [:index, :show]
 end

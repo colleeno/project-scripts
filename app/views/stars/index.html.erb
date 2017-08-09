@@ -1,0 +1,7 @@
+<h2>stars</h2>
+
+<% @stars.each do |star| %>
+<% if star.user == current_user %>
+  <%= "#{star.script_id}" %>
+  <% end %>
+<% end %>

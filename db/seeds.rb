@@ -12,8 +12,8 @@ Category.destroy_all
 
 admin = User.create(email: 'colleenaoreilly@gmail.com', password: 'password')
 
-tv = Category.create(name: 'TV')
-film = Category.create(name: 'Film')
+tv = Category.create(name: 'tv')
+film = Category.create(name: 'film')
 
 film.scripts.create(quote: "There's no place like home.", character: "Dorothy Gale", show: "The Wizard of Oz", user: admin)
 film.scripts.create(quote: "Life is like a box of chocolates. You never know what you're gonna get.", character: "Forrest Gump", show: "Forrest Gump", user: admin)
