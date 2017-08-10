@@ -1,24 +1,21 @@
-# README
+# Scripts
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+An application where users can view, guess, share, and save their favorite tv and movie quotes.
 
-Things you may want to cover:
+**Functionality**
+* Users can view quotes by tv or movie categories
 
-* Ruby version
+* Users can click on a quote to view quote show page. On this page, user can click 'who said it?' button to view the character and source of the quote
 
-* System dependencies
+* Users can add new quote (will be directed to create account or login). They can view the quotes they posted on their 'my quotes' page once added
 
-* Configuration
+* Users can 'star' a quote, saving it to their 'starred' view page
 
-* Database creation
+* Starred count displays on quote show page
 
-* Database initialization
+**Technical Information**  
+* Ruby version 2.4
 
-* How to run the test suite
+* Rails version 5.1.3
 
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+* Gems added: jquery-rails, jquery-masonry-rails, devise
