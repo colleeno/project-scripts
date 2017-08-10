@@ -12,4 +12,6 @@ Rails.application.routes.draw do
   end
   resources :stars, only: [:index]
   resources :users, path: :quotes, only: [:index]
+
+
 end
