@@ -35,7 +35,6 @@ film.scripts.create(quote: "There’s no crying in baseball!", character: "Jimmy
 film.scripts.create(quote: "The seaweed is always greener in somebody else’s lake.", character: "Sebastian", show: "The Little Mermaid", user: admin)
 film.scripts.create(quote: "If I could only have one food for the rest of my life? That's easy-Pez. Cherry-flavored Pez. No question about it.", character: "Vern", show: "Stand By Me", user: admin)
 film.scripts.create(quote: "Do you have some sort of business woman special?", character: "Romy White", show: "Romy and Michele's High School Reunion", user: admin)
-film.scripts.create(quote: "Are you not entertained?", character: "Maximus Decimus Meridius", show: "Gladiator", user: admin)
 film.scripts.create(quote: "It is a truth universally acknowledged that when one part of your life starts going okay, another falls spectacularly to pieces.", character: "Bridget Jones", show: "Bridget Jones's Diary", user: admin)
 film.scripts.create(quote: "Are you not entertained?", character: "Maximus Decimus Meridius", show: "Gladiator", user: admin)
 film.scripts.create(quote: "Good work. Sleep well. I'll most likely kill you in the morning.", character: "Dread Pirate Roberts", show: "The Princess Bride", user: admin)

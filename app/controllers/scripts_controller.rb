@@ -64,9 +64,10 @@ before_action :authenticate_user!, only: [:new, :add_star, :remove_star]
   end
 
   def remove_star
+    @category = Category.find_by_name(params[:category_id])
     @script = Script.find(params[:id])
     @script.stars.find_by(user: current_user).destroy
-    redirect_back(fallback_location: root_path)
+    redirect_to category_script_path(@category, @script)
   end
 
   private
