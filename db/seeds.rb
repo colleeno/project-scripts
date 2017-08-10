@@ -48,7 +48,6 @@ tv.scripts.create(quote: "Hashbrown: no filter.", character: "Kimmy Schmidt", sh
 tv.scripts.create(quote: "I am Beyonce. Always.", character: "Michael Scott", show: "The Office", user: admin)
 tv.scripts.create(quote: "These pretzels are making me thirsty", character: "George Costanza", show: "Seinfeld", user: admin)
 tv.scripts.create(quote: "I wish there was a way to know you're in the good old days before you've actually left them.", character: "Andy Bernard", show: "The Office", user: admin)
-tv.scripts.create(quote: "I am Beyonce. Always.", character: "Michael Scott", show: "The Office", user: admin)
 tv.scripts.create(quote: "I'll keep the crowd away like a Greenpeace volunteer.", character: "Titus Andromedon", show: "Unbreakable Kimmy Schmidt", user: admin)
 tv.scripts.create(quote: "I'm gonna be direct and honest with you, I would like a glass of red wine and I'll take the cheapest one you have because I can't tell the difference.", character: "Leslie Nope", show: "Parks and Recreation", user: admin)
 tv.scripts.create(quote: "I typed your symptoms into the thing up here, and it says you could have network connectivity problems.", character: "Andy Dwyer", show: "Parks and Recreation", user: admin)

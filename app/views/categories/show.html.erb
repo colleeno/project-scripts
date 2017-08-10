@@ -1,6 +1,6 @@
 <main class="category">
   <h2><%= @category.name %> quotes</h2>
-    <%= link_to "+ new quote", new_category_script_path(@category), :class => "form-link"%>
+    <div class="form-link"><%= link_to "+ new quote", new_category_script_path(@category)%></div>
 
 <div class="transitions-enabled masonry grid">
     <% @category.scripts.order("created_at DESC").each do |script| %>

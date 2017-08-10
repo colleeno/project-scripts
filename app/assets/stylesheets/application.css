@@ -161,9 +161,12 @@ button:active {
 .form-link {
   display: block;
   text-align: center;
-  color: #666666;
-  margin-top: 3em;
+  margin-top: 1em;
   font-size: 14px;
+}
+
+.form-link a {
+  color: #666666;
 }
 
 .category .form-link {
@@ -220,18 +223,14 @@ abbr {
   display: none;
 }
 
-a.star, a.no-star {
-  display: block;
-  text-decoration: none;
+.star, .no-star {
+  margin: 0 auto;
   text-align: center;
+}
+
+.star a, .no-star a {
+  text-decoration: none;
   font-size: 20px;
-}
-
-a.star {
-  color: grey;
-}
-
-a.no-star {
   color: grey;
 }
 

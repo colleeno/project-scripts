@@ -5,9 +5,9 @@
 <div class="quote-show">
   <h2><span class="quotemark">&ldquo;</span><%= @script.quote %><span class="quotemark">&rdquo;</h2>
     <% if @script.users.include? current_user %>
-      <%= link_to "&starf;".html_safe, remove_star_category_script_path(@category, @script), method: :delete, class: "star" %>
+      <div class="star"><%= link_to "&starf;".html_safe, remove_star_category_script_path(@category, @script), method: :delete %></div>
     <% else %>
-      <%= link_to "&star;".html_safe, add_star_category_script_path(@category, @script), method: :post, class: "no-star" %>
+      <div class="no-star"><%= link_to "&star;".html_safe, add_star_category_script_path(@category, @script), method: :post %></div>
     <% end %>
     <div class="stars-count"><%= @script.stars.count %> stars</div>
   <button type="button" name="button">who said it?</button>
