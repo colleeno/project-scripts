@@ -23,10 +23,8 @@ before_action :authenticate_user!, only: [:new, :add_star, :remove_star]
   end
 
   def show
-    if current_user.try(:admin?)
     @category = Category.find_by_name(params[:category_id])
     @script = Script.find(params[:id])
-    end
   end
 
   def edit

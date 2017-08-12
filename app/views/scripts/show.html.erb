@@ -1,6 +1,6 @@
 <% if @script.user == current_user %>
 <%= link_to "edit or remove quote", edit_category_script_path(@category, @script), :class => "form-link"%>
-<% elsif current_user.admin? %>
+<% elsif current_user.try(:admin?) %>
 <%= link_to "edit or remove quote", edit_category_script_path(@category, @script), :class => "form-link"%>
 <% end %>
 
