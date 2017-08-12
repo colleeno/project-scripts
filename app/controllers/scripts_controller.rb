@@ -38,6 +38,9 @@ before_action :authenticate_user!, only: [:new, :add_star, :remove_star]
     if @script.user == current_user
       @script.update(script_params)
       flash[:notice] = "Quote updated"
+    elsif current_user.admin?
+      @script.update(script_params)
+      flash[:notice] = "Quote updated by admin user"
     else
       flash[:alert] = "Only the creator of the quote can update"
     end
@@ -50,6 +53,9 @@ before_action :authenticate_user!, only: [:new, :add_star, :remove_star]
       if @script.user == current_user
         @script.destroy
         flash[:alert] = "Quote deleted"
+      elsif current_user.admin?   
+        @script.destroy
+        flash[:alert] = "Quote deleted by admin user"
       else
         flash[:alert] = "Only the creator of the quote can delete"
       end

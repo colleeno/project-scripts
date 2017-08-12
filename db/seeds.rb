@@ -10,7 +10,7 @@ User.destroy_all
 Script.destroy_all
 Category.destroy_all
 
-admin = User.create(email: 'colleenaoreilly@gmail.com', password: 'password')
+admin = User.create(email: 'colleenaoreilly@gmail.com', password: 'password', admin: true)
 
 tv = Category.create(name: 'tv')
 film = Category.create(name: 'film')
