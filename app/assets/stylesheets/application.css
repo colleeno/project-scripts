@@ -197,6 +197,7 @@ input[type=text] {
   font-family: monospace;
   outline: none;
   border: none;
+  border-radius: 0;
   border-bottom: 1px solid grey;
 }
 
@@ -310,6 +311,10 @@ abbr {
 
   input[type=submit], input[type=label] {
     font-size: 14px;
+  }
+
+  .home-content {
+    margin: 25% auto;
   }
 
   h1 {

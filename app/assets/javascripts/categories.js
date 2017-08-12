@@ -15,6 +15,3 @@ $("button").click(function(){
 
 
 });
-
-
-console.log('loaded')

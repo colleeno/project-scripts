@@ -23,8 +23,10 @@ before_action :authenticate_user!, only: [:new, :add_star, :remove_star]
   end
 
   def show
+    if current_user.try(:admin?)
     @category = Category.find_by_name(params[:category_id])
     @script = Script.find(params[:id])
+    end
   end
 
   def edit
@@ -53,7 +55,7 @@ before_action :authenticate_user!, only: [:new, :add_star, :remove_star]
       if @script.user == current_user
         @script.destroy
         flash[:alert] = "Quote deleted"
-      elsif current_user.admin?   
+      elsif current_user.admin?
         @script.destroy
         flash[:alert] = "Quote deleted by admin user"
       else
