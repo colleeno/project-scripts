@@ -311,6 +311,7 @@ abbr {
 
   input[type=submit], input[type=label] {
     font-size: 14px;
+    min-width: none;
   }
 
   .home-content {
